@@ -391,6 +391,7 @@ function loadDataset(dataset) {
             if (!loaded) {
                 loadDocData(doc);
                 loaded = true;
+                event.target.querySelector(".hide").classList.remove("hide");
             }
         });
 

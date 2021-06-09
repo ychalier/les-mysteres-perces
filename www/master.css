@@ -231,3 +231,7 @@ body.blackyellow .timeline .timeline-item .timeline-icon::before {
 .autocomplete-active {
     background-color: #181818 !important;
 }
+
+.hide {
+    display: none;
+}
