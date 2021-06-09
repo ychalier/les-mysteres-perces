@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/ychalier/pifekit/pifekit.css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/ychalier/pifekit/pifekit.js"></script>
+    <link rel="stylesheet" type="text/css" href="master.css" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Les Mystères percés</title>
+</head>
+
+<body class="blackyellow">
+
+    <div class="columns container">
+        <div class="column col-2 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12"></div>
+        <div class="column col-3 col-xl-4 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <h1>&nbsp;</h1>
+            <div>
+                <form id="form">
+
+                    <div class="form-group my-2">
+                        <input id="btn-filter" class="btn btn-primary" type="submit" value="Filtrer" />
+                        <input class="btn btn-link" type="reset" value="Réinitialiser le formulaire" />
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="input-source" style="color: yellow">Source</label>
+                        <select class="form-select" id="input-source" multiple>
+                            <option value="youtube">YouTube</option>
+                            <option value="inatheque">Inathèque</option>
+                            <option value="madelen">madelen</option>
+                            <option value="lmdmfr">les-maitres-du-mystere.fr</option>
+                        </select>
+                        <span class="form-input-hint">La touche <kbd>CTRL</kbd> permet de (dé)sélectionner plusieurs
+                            entrées.</span>
+                    </div>
+
+                    <br>
+
+                    <div class="form-group">
+                        <label class="form-label" for="input-collection" style="color: yellow">Collection</label>
+                        <select class="form-select" id="input-collection">
+                            <option>Aucun filtre</option>
+                            <option>Le jeu du mystère et de l'aventure</option>
+                            <option>Faits Divers</option>
+                            <option>Les Maîtres du mystère</option>
+                            <option>Les Mystères de l'été</option>
+                            <option>Mystère Mystère</option>
+                            <option>L'Heure du mystère</option>
+                            <option>Les Nouveaux maîtres du mystère</option>
+                        </select>
+                    </div>                   
+
+                    <div class="form-group">
+                        <label class="form-label" for="input-title" style="color: yellow">Titre</label>
+                        <input class="form-input" type="text" id="input-title"
+                            placeholder="Mort, crime, monsieur, nuit, affaire, ..." />
+                        <span class="form-input-hint">Supporte les expressions régulières.</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" style="color: yellow">1<sup>ère</sup> diffusion</label>
+                        <div class="input-group">
+                            <span class="input-group-addon">Entre</span>
+                            <input type="date" id="input-date-min" class="form-input" />
+                            <span class="input-group-addon">et</span>
+                            <input type="date" id="input-date-max" class="form-input" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="input-author" style="color: yellow">Auteur</label>
+                        <div class="autocomplete">
+                            <input class="form-input" type="text" id="input-author"
+                                placeholder="Charles Maitre, Jeannine Raylambert, ..." />
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="form-group">
+                        <label class="form-label" style="color: yellow">Durée</label>
+                        <div class="input-group">
+                            <span class="input-group-addon">Entre</span>
+                            <input type="number" id="input-duration-min" class="form-input" />
+                            <span class="input-group-addon">min&nbsp;et</span>
+                            <input type="number" id="input-duration-max" class="form-input" />
+                            <span class="input-group-addon">min</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="input-pitch" style="color: yellow">Rechercher dans
+                            l'accroche</label>
+                        <input class="form-input" type="text" id="input-pitch"
+                            placeholder="Femme, commissaire, mari, inspecteur, ..." />
+                        <span class="form-input-hint">Supporte les expressions régulières.</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="input-opening" style="color: yellow">Générique</label>
+                        <select class="form-select" id="input-opening" multiple></select>
+                        <span class="form-input-hint">La touche <kbd>CTRL</kbd> permet de (dé)sélectionner plusieurs
+                            entrées.</span>
+                    </div>
+
+                    <br>
+
+                    <div class="form-group">
+                        <label class="form-label" for="input-directors" style="color: yellow">Réalisateur</label>
+                        <div class="autocomplete">
+                            <input class="form-input" type="text" id="input-directors"
+                                placeholder="Pierre Billard, Bernard Latour, ..." />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="input-producers" style="color: yellow">Producteur</label>
+                        <div class="autocomplete">
+                            <input class="form-input" type="text" id="input-producers"
+                                placeholder="Pierre Billard, Germaine Beaumont, ..." />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="input-cast" style="color: yellow">Interprète</label>
+                        <div class="autocomplete">
+                            <input class="form-input" type="text" id="input-cast"
+                                placeholder="Gaétan Jor, Pierre Delbon, ..." />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" style="color: yellow">Nombre d'interpètes</label>
+                        <div class="input-group">
+                            <span class="input-group-addon">Entre</span>
+                            <input type="number" id="input-cast-min" class="form-input" />
+                            <span class="input-group-addon">et</span>
+                            <input type="number" id="input-cast-max" class="form-input" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="input-crew" style="color: yellow">Membres de l'équipe</label>
+                        <div class="autocomplete">
+                            <input class="form-input" type="text" id="input-crew"
+                                placeholder="Roger Régent, Jean Bériac, ..." />
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="form-group">
+                        <label class="form-label" for="input-descriptors" style="color: yellow">Descripteurs</label>
+                        <div class="autocomplete">
+                            <input class="form-input" type="text" id="input-descriptors"
+                                placeholder="roman policier, film, meurtre, ..." />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="input-facets" style="color: yellow">Facettes</label>
+                        <select class="form-select" id="input-facets" multiple>
+                            <option>Accident</option>
+                            <option>Adultère</option>
+                            <option>Argent</option>
+                            <option>Arme à feu</option>
+                            <option>Arme blanche</option>
+                            <option>Chantage</option>
+                            <option>Dette</option>
+                            <option>Drogue</option>
+                            <option>Enlèvement</option>
+                            <option>Enquête</option>
+                            <option>Entreprise</option>
+                            <option>Héritage</option>
+                            <option>Justice</option>
+                            <option>Mariage</option>
+                            <option>Meurtre</option>
+                            <option>Poison</option>
+                            <option>Suicide</option>
+                            <option>Vol</option>
+                        </select>
+                        <span class="form-input-hint">La touche <kbd>CTRL</kbd> permet de (dé)sélectionner plusieurs
+                            entrées.</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="input-facets-bound" style="color: yellow">Score minimal pour
+                            attribuer une facette</label>
+                        <input type="number" class="form-input" id="input-facets-bound" />
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="input-relevant-words" style="color: yellow">Rechercher un mot
+                            important</label>
+                        <input class="form-input" type="text" id="input-relevant-words"
+                            placeholder="brigadier, atelier, ..." />
+                    </div>
+
+                </form>
+            </div>
+            <br>
+        </div>
+        <div class="column col-5 col-xl-8 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <h1>Les Mystères percés</h1>
+            <div class="doc-count"></div>
+            <div id="list"></div>
+        </div>
+        <div class="column col-2 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12"></div>
+    </div>
+
+    <div id="toolbox">
+        <button title="Retourner en haut" id="btn-top" class="btn btn-action s-circle"><i
+                class="icon icon-arrow-up"></i></button>
+        <button title="Retourner en haut" id="btn-bottom" class="btn btn-action s-circle"><i
+                class="icon icon-arrow-down"></i></button>
+        <button title="Déplier tous les onglets" id="btn-expand-all" class="btn btn-action s-circle"><i
+                class="icon icon-plus"></i></button>
+        <button title="Replier tous les onglets" id="btn-collapse-all" class="btn btn-action s-circle"><i
+                class="icon icon-minus"></i></button>
+    </div>
+
+    <script type="text/javascript" src="master.js"></script>
+
+    <template id="template-doc">
+        <div class="card my-2">
+            <div class="card-body">
+                <details>
+                    <summary>
+                        <b class="doc-title" style="color: yellow;"></b>
+                        <span style="float: right;">
+                            <a class="btn btn-link doc-inatheque"
+                                style="border: none; padding: 0 .25rem; height: auto; line-height: 0"><img class="icon"
+                                    src="images/inatheque.png" title="Notice Inathèque" /></a>
+                            <a class="btn btn-link doc-madelen"
+                                style="border: none; padding: 0 .25rem; height: auto; line-height: 0"><img class="icon"
+                                    src="images/madelen.png" title="Streaming sur INA madelen" /></a>
+                            <a class="btn btn-link doc-lmdmfr"
+                                style="border: none; padding: 0 .25rem; height: auto; line-height: 0"><img class="icon"
+                                    src="images/lmdmfr.png" title="les-maitres-du-mystere.fr" /></a>
+                            <a class="btn btn-link doc-youtube"
+                                style="border: none; padding: 0 .25rem; height: auto; line-height: 0"><img class="icon"
+                                    src="images/youtube.png" title="YouTube" /></a>
+                        </span>
+                        <div
+                            style="display: flex; flex-direction: row; justify-content: space-between; margin-top: .2rem">
+                            <div>
+                                <b class="doc-collection" style="margin-right: .4rem"></b>
+                                <span class="doc-date" style="margin-right: .4rem"></span>
+                                <span class="doc-author"></span>
+                            </div>
+                            <div>
+                                <kbd class="doc-duration" style="word-break: keep-all; white-space: nowrap"></kbd>
+                            </div>
+                        </div>
+                    </summary>
+                    <div>
+                        <div class="my-2">
+                            <div><em style="color: yellow">Accroche</em></div>
+                            <div class="doc-pitch"></div>
+                        </div>
+                        <div class="my-2">
+                            <div><em style="color: yellow">Générique</em></div>
+                            <div class="doc-opening"></div>
+                        </div>
+                        <div class="my-2">
+                            <div><em style="color: yellow">Interprète<span class="doc-cast-count"></span></em></div>
+                            <div class="doc-cast"></div>
+                        </div>
+                        <div class="my-2">
+                            <div><em style="color: yellow">Réalisation</em></div>
+                            <div class="doc-directors"></div>
+                        </div>
+                        <div class="my-2">
+                            <div><em style="color: yellow">Production</em></div>
+                            <div class="doc-producers"></div>
+                        </div>
+                        <div class="my-2">
+                            <div><em style="color: yellow">Équipe</em></div>
+                            <div class="doc-crew"></div>
+                        </div>
+                        <div class="my-2 doc-descriptors">
+                            <div><em style="color: yellow">Descripteurs</em></div>
+                        </div>
+                        <div class="my-2 doc-facets">
+                            <div><em style="color: yellow">Facettes</em></div>
+                        </div>
+                        <div class="my-2 doc-relevant-words">
+                            <div><em style="color: yellow">Mots importants</em></div>
+                        </div>
+                        <div class="my-2">
+                            <div><em style="color: yellow">Chapitres</em></div>
+                            <div class="timeline doc-chapters"></div>
+                        </div>
+                </details>
+            </div>
+        </div>
+    </template>
+
+    <div class="modal active" id="modal-loading">
+        <span class="modal-overlay" style="opacity: 0.2;"></span>
+        <div class="loading loading-lg" title="Chargement..."></div>
+    </div>
+
+</body>
+
+</html>

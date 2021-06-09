@@ -1,0 +1,12 @@
+tqdm
+requests
+bs4
+wave
+webvtt-py
+python-slugify
+numpy
+wave
+matplotlib
+pandas
+eyed3
+fontTools

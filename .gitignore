@@ -1,0 +1,7 @@
+__pycache__/
+*.bin
+data/albumarts/
+data/youtube/
+data/inatheque/
+.ipynb_checkpoints/
+conflicts.csv

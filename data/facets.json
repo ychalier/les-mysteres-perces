@@ -1,0 +1,163 @@
+{
+    "facets": [
+        {
+            "label": "Enquête",
+            "triggers": [
+                "enqu[êe]t",
+                "inspecteur"
+            ]
+        },
+        {
+            "label": "Adultère",
+            "triggers": [
+                "amant",
+                "(me|te|le|vous) trompe",
+                "ma[îi]tresse",
+                "adult[èe]re"
+            ]
+        },
+        {
+            "label": "Entreprise",
+            "triggers": [
+                "secréta",
+                "je dirige",
+                "embauch",
+                "usine",
+                "directeur",
+                "pr[ée]side",
+                "[ms]on associ[ée]"
+            ]
+        },
+        {
+            "label": "Meurtre",
+            "triggers": [
+                "meurtr",
+                "assassin",
+                "tueur"
+            ]
+        },
+        {
+            "label": "Vol",
+            "triggers": [
+                "voleu",
+                "braqu(age|eur|er)",
+                "cambriol"
+            ]
+        },
+        {
+            "label": "Argent",
+            "triggers": [
+                "chèque",
+                "banque",
+                "francs?",
+                "riche"
+            ]
+        },
+        {
+            "label": "Justice",
+            "triggers": [
+                "avocat",
+                "juge",
+                "tribuna",
+                "b[aâ]tonnier",
+                "justice"
+            ]
+        },
+        {
+            "label": "Chantage",
+            "triggers": [
+                "fa[iî](re|sez|tes|s|t) chanter",
+                "ma[îi]tre[- ]chanteu",
+                "chantage"
+            ]
+        },
+        {
+            "label": "Accident",
+            "triggers": [
+                "accident",
+                "carambol"
+            ]
+        },
+        {
+            "label": "Suicide",
+            "triggers": [
+                "suicid"
+            ]
+        },
+        {
+            "label": "Héritage",
+            "triggers": [
+                "h[ée]rit",
+                "hérédité",
+                "patrimoine"
+            ]
+        },
+        {
+            "label": "Dette",
+            "triggers": [
+                "dette",
+                "créanc",
+                "endett"
+            ]
+        },
+        {
+            "label": "Mariage",
+            "triggers": [
+                "mari(é|a|er)",
+                "dot ",
+                "épous",
+                "fian[cç](er|aill)"
+            ]
+        },
+        {
+            "label": "Poison",
+            "triggers": [
+                "(em)?poison",
+                "antidote",
+                "arsenic",
+                "venin",
+                "cigu[eë]",
+                "mort[- ]aux?[- ]rat"
+            ]
+        },
+        {
+            "label": "Arme à feu",
+            "triggers": [
+                "revolver",
+                "pistolet",
+                "arme [aà] feu",
+                "carabine",
+                "fusil",
+                "pétard",
+                "munition"
+            ]
+        },
+        {
+            "label": "Arme blanche",
+            "triggers": [
+                "couteau",
+                "poignard",
+                "épée",
+                "coutelas"
+            ]
+        },
+        {
+            "label": "Drogue",
+            "triggers": [
+                "drogu[eé]",
+                "cocaïne",
+                "héroïne",
+                "cannabis"
+            ]
+        },
+        {
+            "label": "Enlèvement",
+            "triggers": [
+                "rançon",
+                "enlèvement",
+                "(il|elle) a été enlevé",
+                "kidnap"
+            ]
+        }
+    ]
+}

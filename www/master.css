@@ -1,0 +1,233 @@
+#toolbox {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    opacity: .2;
+    transition: .2s ease;
+}
+
+#toolbox:hover {
+    opacity: 1;
+}
+
+
+body.blackyellow .loading::after {
+    border-bottom-color: yellow;
+    border-left-color: yellow;
+}
+
+
+body.blackyellow .modal.active .modal-overlay {
+    background-color: rgba(249, 249, 247, 0.75);
+}
+
+
+
+body.blackyellow {
+    background-color: #202020;
+    background-image: url("https://i.imgur.com/vCfIv5t.png");
+    background-repeat: repeat;
+    background-attachment: fixed;
+    color: rgb(190, 190, 190);
+
+    /* --color-card-bg: #423f30; */
+    --color-card-bg: #111;
+    --color-link: yellow;
+    --color-focus: yellow;
+}
+
+body.blackyellow .btn-action {
+    border-color: var(--color-link);
+    color: var(--color-link);
+    background-color: var(--color-card-bg);
+}
+
+body.blackyellow .btn-action:hover,
+body.blackyellow .btn-action:focus,
+body.blackyellow .btn-action:active {
+    border-color: var(--color-link);
+    color: var(--color-link);
+    background-color: #333;
+}
+
+body.blackyellow .btn.btn-primary {
+    background: yellow;
+    /* border-color: yellow; */
+    border: none;
+    color: black;
+}
+
+body.blackyellow .btn.btn-primary:hover,
+body.blackyellow .btn.btn-primary:focus,
+body.blackyellow .btn.btn-primary:active {
+    background: rgba(255, 255, 0, 0.7);
+    /* border-color: rgba(255, 255, 0, 0.7); */
+    /* color: yellow; */
+}
+
+body.blackyellow .btn.btn-link:hover,
+body.blackyellow .btn.btn-link:focus,
+body.blackyellow .btn.btn-link:active {
+    background: rgba(255, 255, 0, 0.3);
+    /* color: black !important; */
+}
+
+
+
+
+body.blackyellow h1,
+body.blackyellow h2,
+body.blackyellow h3,
+body.blackyellow h4,
+body.blackyellow h5,
+body.blackyellow h6 {
+    color: rgb(238, 238, 238);
+}
+
+body.blackyellow .card,
+body.blackyellow .empty {
+    background-color: var(--color-card-bg);
+    border-color: var(--color-card-bg);
+    transition: .2s ease;
+}
+
+body.blackyellow .card:hover {
+    background-color: #29271e;
+    border-color: gold;
+}
+
+body.blackyellow .modal-container {
+    background-color: var(--color-card-bg);
+}
+
+body.blackyellow .modal-container .modal-header {
+    color: rgb(190, 190, 190);
+}
+
+body.blackyellow .form-select,
+body.blackyellow .chip {
+    color: var(--color-card-bg);
+}
+
+body.blackyellow a,
+body.blackyellow .btn.btn-link {
+    color: var(--color-link);
+}
+
+body.blackyellow a.active,
+body.blackyellow a:active,
+body.blackyellow a:focus,
+body.blackyellow a:hover,
+body.blackyellow .btn.btn-link.active,
+body.blackyellow .btn.btn-link:active,
+body.blackyellow .btn.btn-link:focus,
+body.blackyellow .btn.btn-link:hover {
+    color: var(--color-focus);
+}
+
+body.blackyellow .tab .tab-item a.active,
+body.blackyellow.tab .tab-item.active a {
+    color: var(--color-link);
+    border-bottom-color: var(--color-link);
+}
+
+body.blackyellow .table.table-striped tbody tr:nth-of-type(2n+1) {
+    background: rgba(0, 0, 0, .1);
+}
+
+body.blackyellow .table.table-hover tbody tr:hover {
+    background: rgba(0, 0, 0, .2);
+}
+
+body.blackyellow .table td,
+body.blackyellow .table th {
+    border-bottom-color: #2F2F2F;
+}
+
+body.blackyellow .navbar {
+    background: #101010;
+}
+
+body.blackyellow .form-input,
+body.blackyellow .form-select,
+body.blackyellow .form-select option {
+    background-color: #101010 !important;
+    border-color: #0D0D0D;
+    color: rgb(200, 200, 200);
+}
+
+body.blackyellow .input-group .input-group-addon {
+    background-color: #101010;
+    border-color: #0D0D0D;
+}
+
+body.blackyellow .form-input::placeholder {
+    color: rgb(200, 200, 200);
+}
+
+body.blackyellow code {
+    background-color: #101010;
+}
+
+body.blackyellow code.code {
+    color: #d73e48;
+}
+
+body.blackyellow pre.code {
+    color: #d7d8d9;
+}
+
+body.blackyellow .tab {
+    border-color: #4F4F4F;
+}
+
+body.blackyellow .form-input:focus,
+body.blackyellow .form-select:focus {
+    box-shadow: 0 0 0 .1rem rgba(217, 208, 85, 0.2);
+}
+
+body.blackyellow .timeline .timeline-item .timeline-icon::before {
+    border-color: gold;
+}
+
+.chip.tooltip:hover {
+    overflow: visible;
+    overflow-y: none;
+}
+
+.chip {
+    background-color: rgb(20, 20, 20);
+    color: rgb(190, 190, 190) !important;
+    border: 1px solid #222;
+    border-radius: .2rem;
+}
+
+.autocomplete {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.autocomplete-items {
+    position: absolute;
+    border: none;
+    z-index: 99;
+    top: 120%;
+    left: 0;
+    right: 0;
+    box-shadow: 0 0 .3rem rgba(0, 0, 0, .2);
+}
+
+.autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+    background-color: rgb(31, 30, 12);
+}
+
+.autocomplete-items div:hover {
+    background-color: #181818;
+}
+
+.autocomplete-active {
+    background-color: #181818 !important;
+}
